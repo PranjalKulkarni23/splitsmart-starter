@@ -76,6 +76,7 @@ export default function SplitDashboard() {
 
   useEffect(() => {
     let active = true;
+    console.info('NEXT_PUBLIC_SUPABASE_URL detected:', isSupabaseConfigured);
     const loadGroups = async () => {
       if (!isSupabaseConfigured) {
         setError('Configure NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to connect to Supabase.');
