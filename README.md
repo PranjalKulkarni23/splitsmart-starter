@@ -61,6 +61,16 @@ git push
 
 ---
 
+## AI expense splitting
+
+Set `GEMINI_API_KEY` in `.env.local` for local development and in your deployment's
+Environment Variables. The expense form sends its sentence to `/api/split`; the server
+uses Gemini to return the total amount, number of people (including you), amount per
+person, and a description. For example, “split with 2 friends” counts 3 people, while
+“just me” counts 1.
+
+---
+
 ## What's inside
 
 | | |
